@@ -2,6 +2,14 @@
 
 Este é um projeto básico de uma API CRUD usando Flask, mantendo os dados em memória.
 
+## Pré-requisitos
+
+Instale as dependências:
+
+pip install -r requirements.txt
+
+python app.py
+
 ## Como rodar o projeto
 
 1. Instale o Flask:
