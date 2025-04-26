@@ -1,34 +1,80 @@
 # API CRUD Simples com Flask
 
-Este é um projeto básico de uma API CRUD usando Flask, mantendo os dados em memória.
+## 1. Pré-requisitos
 
-## Pré-requisitos
+- Python 3.8 ou superior
+- Git (opcional, para versionamento)
 
-Instale as dependências:
 
-pip install -r requirements.txt
+## 2. Instalação
 
-python app.py
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/codm1o/api-crud-flask.git
+   cd api-crud-flask
+   ```
+2. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## Como rodar o projeto
 
-1. Instale o Flask:
+## 3. Como rodar
 
-2. Rode o app:
+1. Inicie o servidor:
+   ```bash
+   python app.py
+   ```
+2. Abra no navegador ou cliente REST:
+   ```
+   http://127.0.0.1:5000/
+   ```
 
-3. A API estará disponível em: `http://127.0.0.1:5000/`
 
-## Endpoints
+## 4. Endpoints
 
-### Listar usuários
+### 4.1 Listar usuários
+
 - **GET** `/users`
-- Retorna a lista de todos os usuários.
+- Retorna a lista de todos os usuários cadastrados.
 
-### Criar usuário
+#### Exemplo de resposta
+```json
+[]
+```
+
+
+### 4.2 Criar usuário
+
 - **POST** `/users`
-- Envie um JSON no body da requisição:
+- Body (JSON):
+  ```json
+  {
+    "name": "Nome do usuário"
+  }
+  ```
+- Retorna o novo usuário com `id` gerado.
+
+#### Exemplo de resposta
 ```json
 {
- "name": "Nome do usuário"
+  "id": 1,
+  "name": "Nome do usuário"
 }
+```
+
+
+### 4.3 Deletar usuário
+
+- **DELETE** `/users/{id}`
+- Remove o usuário com o `id` especificado.
+
+#### Exemplo de resposta
+```json
+{
+  "message": "Usuário deletado com sucesso"
+}
+```
+
+*Desenvolvido por [codm1o](https://github.com/codm1o) — 2025*
 
