@@ -31,3 +31,8 @@ python app.py
 {
  "name": "Nome do usuário"
 }
+
+## Tecnologias usadas
+- Python 3.10
+- Flask
+- Insomnia ou Postman para testes de API
